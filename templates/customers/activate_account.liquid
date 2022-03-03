@@ -1,0 +1,37 @@
+<div class="article use-alt-bg fully-padded-row--small" data-cc-animate="">
+  <div class="container">
+    <div class="align-center spaced-column">
+      
+        
+            <div class="rte lightly-spaced-row "><p>Join our VIP Program &amp; Receive a <strong>$10</strong> off CODE. VIP Members get free items, expedited customer service and discounts up <strong>40%</strong> on select styles seasonly.</p><p>*Join by Feb. 14th to enter our V-day giveaway and enter for the chance to win a Personalized Valentines Day Basket worth <strong>$300+</strong></p></div>
+
+          
+      
+    </div>
+  </div>
+</div>
+<div id="template" class="small-form" data-cc-animate>
+  <div class="template_header">
+    <h2 class="title">{{ 'customer.activate_account.title' | t }}</h2>
+    <p class="note">{{ 'customer.activate_account.subtext' | t }}</p>
+  </div>
+  <br>
+  {% form 'activate_customer_password' %}
+    {{ form.errors | default_errors }}
+
+    <div id="password" class="input-row">
+      <label class="large" for="password">{{ 'customer.activate_account.password' | t }}</label>
+      <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
+    </div>
+    <div id="password_confirm" class="input-row">
+      <label class="large" for="password_confirmation">{{ 'customer.activate_account.password_confirm' | t }}</label>
+      <input type="password" value="" name="customer[password_confirmation]" id="customer_password_confirmation" class="large password" size="16" />
+    </div>
+    <div class="action_bottom">
+      <p>
+        <input class="btn" type="submit" value="{{ 'customer.activate_account.submit' | t }}" />
+      </p>
+      <input type="submit" class="cancel" name="decline" id="customer_decline" value="{{ 'customer.activate_account.cancel' | t }}" />
+    </div>
+  {% endform %}
+</div>

@@ -1,0 +1,24 @@
+{% unless section.settings.full_width %}<div class="article">{% endunless %}
+ 
+    <div class="rte">
+      {{ page.content }}
+    </div>
+  </div>
+{% unless section.settings.full_width %}</div>{% endunless %}
+
+
+{% schema %}
+  {
+    "name": "Page",
+    "class": "page-section-spacing",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full width",
+        "default": false
+      }
+    ]
+  }
+{% endschema %}
+
